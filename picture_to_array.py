@@ -1,4 +1,5 @@
 '''Tekne Consulting blogpost --- teknecons.com'''
+'''pictures from https://www.kaggle.com/ivanfel/honey-bee-pollen'''
 
 
 import numpy as np
