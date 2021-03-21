@@ -27,8 +27,6 @@ mixed_precision.set_global_policy('mixed_float16')
 
 print(tf.test.is_built_with_cuda(), tf.config.list_physical_devices('GPU'))
 
-base_savename = 'model150x90_'
-
 
 '''initialize and prepare data'''
 
@@ -147,6 +145,7 @@ def model_eval(model_name: 'path', splitted_data):
 
 
 if __name__ == '__main__':
+    base_savename = 'model150x90_'
     this_dir = os.path.dirname(os.path.abspath(__file__))
     tensor_path = os.path.join(this_dir, 'bees_tensor.npy')
     labels_path = os.path.join(this_dir, 'labels.npy')
