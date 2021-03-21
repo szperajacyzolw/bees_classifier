@@ -119,10 +119,13 @@ def hisory_plot(histories):
     avg_acc = np.mean([h.history['accuracy'] for h in histories], axis=0)
     avg_valacc = np.mean([h.history['val_accuracy'] for h in histories], axis=0)
 
-    fig, ax = plt.subplots()
-    ax.plot(avg_loss)
-    ax.plot(avg_valloss)
-    ax.legend(['train_loss', 'validation_loss'], loc='upper left')
+    fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2)
+    ax1.plot(avg_loss)
+    ax1.plot(avg_valloss)
+    ax1.legend(['train_loss', 'validation_loss'], loc='upper left')
+    ax2.plot(avg_acc)
+    ax2.plot(avg_valacc)
+    ax2.legend(['train_accuracy', 'validation_accuracy'], loc='upper left')
     return fig
 
 
